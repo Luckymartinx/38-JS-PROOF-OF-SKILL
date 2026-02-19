@@ -1,0 +1,185 @@
+@import "../../Styles/kernel.css";
+@import "../../Styles/util.css";
+
+/* ======================================================================= */
+i {
+  font-size: 20px;
+}
+
+.desktop-mobile {
+  border-bottom: 1px solid #f5f5f5;
+}
+.custom-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 96px;
+  border: 1px solid #f5f5f5;
+  border-color: #f5f5f5;
+}
+
+.social-actions button {
+  border: none;
+  box-shadow:
+    0 6px 6px -3px rgba(23, 23, 23, 0.04),
+    0 3px 3px -1.5px rgba(23, 23, 23, 0.04),
+    0 1px 1px -0.5px rgba(23, 23, 23, 0.04),
+    0 0 0 1px rgba(23, 23, 23, 0.08),
+    0 -1px 1px -0.5px rgba(23, 23, 23, 0.04) inset;
+}
+
+.container {
+  width: 100%;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  border-radius: 24px 24px 0 0;
+  background: var(--color-bg-white-0, #fff);
+  box-shadow:
+    0 20px 20px -10px var(--shadow-gray-shadow-4, rgba(23, 23, 23, 0.04)),
+    0 10px 10px -5px var(--shadow-gray-shadow-4, rgba(23, 23, 23, 0.04)),
+    0 6px 6px -3px var(--shadow-gray-shadow-4, rgba(23, 23, 23, 0.04)),
+    0 3px 3px -1.5px var(--shadow-gray-shadow-4, rgba(23, 23, 23, 0.04)),
+    0 1px 1px -0.5px var(--shadow-gray-shadow-4, rgba(23, 23, 23, 0.04)),
+    0 0 0 1px var(--shadow-gray-shadow-8, rgba(23, 23, 23, 0.08)),
+    0 -1px 1px -0.5px var(--shadow-gray-shadow-6, rgba(23, 23, 23, 0.06)) inset;
+}
+
+.input-wrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  color: var(--color-text-sub-600);
+  width: 100%;
+  padding-block: var(--space-10);
+  padding-inline: var(--space-40);
+  border-radius: var(--radius-12);
+  border: none;
+  background: var(--color-bg-white-0, #fff);
+  box-shadow:
+    0 3px 3px -1.5px rgba(23, 23, 23, 0.04),
+    0 1px 1px -0.5px rgba(23, 23, 23, 0.04),
+    0 0 0 1px rgba(23, 23, 23, 0.08);
+}
+
+.input-wrapper:hover {
+  background: var(--color-bg-weak-50);
+  border: none;
+}
+
+.input-wrapper:focus-within {
+  background: var(--color-bg-white); /* or stronger color */
+  border: 1px solid var(--color-primary-base);
+}
+
+.input-wrapper:focus-within .input-icon:first-of-type {
+  color: var(--color-primary-base);
+}
+
+.input-wrapper .input-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  color: var(--color-text-disabled-300);
+}
+
+.input-wrapper .input-icon:first-of-type {
+  left: 12px;
+}
+.input-wrapper .input-icon:last-of-type {
+  right: 12px;
+  cursor: pointer;
+}
+
+.input-wrapper input {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+  font: inherit;
+  color: inherit;
+  outline: none;
+  z-index: 4;
+  flex: 1;
+}
+.input-wrapper input::placeholder {
+  color: var(--color-text-soft-400);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.084px;
+  background: none;
+}
+
+.auth-form {
+  padding: 0;
+  border-radius: 0;
+  background: var(--color-bg-white-0, #fff);
+  box-shadow: none;
+}
+
+.password-strength-bar {
+  height: 2px;
+}
+
+.password-strength-fill {
+  width: 0%;
+  height: 2px;
+  transition:
+    width 0.3s ease,
+    background-color 0.3s ease;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 24.5rem;
+  }
+  .social-actions {
+    flex-direction: row;
+    gap: var(--space-12);
+    padding-inline: 0;
+    margin-bottom: 1rem;
+  }
+  .social-actions button {
+    border: none;
+    box-shadow:
+      0 6px 6px -3px rgba(23, 23, 23, 0.04),
+      0 3px 3px -1.5px rgba(23, 23, 23, 0.04),
+      0 1px 1px -0.5px rgba(23, 23, 23, 0.04),
+      0 0 0 1px rgba(23, 23, 23, 0.08),
+      0 -1px 1px -0.5px rgba(23, 23, 23, 0.04) inset;
+  }
+
+  .content {
+    flex: 1;
+    overflow-y: visible;
+    border: none;
+    background: var(--color-bg-white-0, #fff);
+    box-shadow: none;
+    padding: 0;
+  }
+  .auth-content {
+    padding: 0;
+    background: var(--color-bg-white-0);
+  }
+
+  .auth-form {
+    /* border: 1px solid var(--color-faded-light); */
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    background: var(--color-bg-white-0, #fff);
+
+    box-shadow:
+      0 20px 20px -10px var(--shadow-gray-shadow-4, rgba(23, 23, 23, 0.04)),
+      0 10px 10px -5px var(--shadow-gray-shadow-4, rgba(23, 23, 23, 0.04)),
+      0 6px 6px -3px var(--shadow-gray-shadow-4, rgba(23, 23, 23, 0.04)),
+      0 3px 3px -1.5px var(--shadow-gray-shadow-4, rgba(23, 23, 23, 0.04)),
+      0 1px 1px -0.5px var(--shadow-gray-shadow-4, rgba(23, 23, 23, 0.04)),
+      0 0 0 1px var(--shadow-gray-shadow-8, rgba(23, 23, 23, 0.08)),
+      0 -1px 1px -0.5px var(--shadow-gray-shadow-6, rgba(23, 23, 23, 0.06))
+        inset;
+  }
+}
