@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temp Converter</title>
+    <link rel="stylesheet" href="../../Styles/kernel.css" />
+    <link rel="stylesheet" href="../../Styles/util.css" />
+    <link rel="stylesheet" href="../04-temp-converter/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="flex flex-col h-screen items-center justify-center">
+    <div
+      class="temperature-converter mx-auto mb-24 flex flex-col gap-28 justify-center items-center"
+    >
+      <!-- Header -->
+      <div class="flex flex-col items-center gap-16 px-24 py-24">
+        <div class="custom-icon items-center justify-center px-12 py-12">
+          <img src="../../Assets/special_icons/temp_icon.svg" alt="temp_icon" />
+        </div>
+        <div class="flex flex-col gap-6 items-center">
+          <p class="text-label-lg text-strong">Temperature Converter</p>
+          <p class="text-label-sm text-soft">
+            Convert between Celsius and Fahrenheit instantly.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-28 mb-24 w-fill items-center">
+        <!-- Celsius -->
+        <div class="input-group flex flex-col w-fill gap-6">
+          <label class="text-label-md text-sub" for="celsius">
+            Celsius (°C)
+          </label>
+          <div class="input-wrapper text-label-sm">
+            <input
+              type="text"
+              id="celsius"
+              name="celsius"
+              placeholder="Enter °C"
+            />
+          </div>
+        </div>
+
+        <!-- Switch Arrow -->
+        <div
+          id="switch-units"
+          class="switch flex items-center justify-center rounded-full bg-weak cursor-pointer hover:bg-soft transition"
+        >
+          <i class="ri-arrow-up-down-line text-sub"></i>
+        </div>
+
+        <!-- Fahrenheit -->
+        <div class="input-group flex flex-col w-fill gap-6">
+          <label class="text-label-md text-sub" for="fahrenheit">
+            Fahrenheit (°F)
+          </label>
+          <div class="input-wrapper text-label-sm">
+            <input
+              type="text"
+              id="fahrenheit"
+              name="fahrenheit"
+              placeholder="Enter °F"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

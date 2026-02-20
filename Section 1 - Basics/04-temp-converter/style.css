@@ -1,0 +1,72 @@
+@import "../../Styles/kernel.css";
+@import "../../Styles/util.css";
+
+/* ======================================================================= */
+
+.custom-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 96px;
+  border: 1px solid #f5f5f5;
+  border-color: #f5f5f5;
+}
+i {
+  width: 16px;
+  height: 16px;
+}
+
+.switch {
+  height: 40px;
+  width: 40px;
+}
+
+.input-wrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  color: var(--color-text-sub-600);
+  width: 100%;
+  padding-block: var(--space-14);
+  padding-inline: var(--space-20);
+  border-radius: var(--radius-full);
+  border: none;
+  background: var(--color-bg-white-0, #fff);
+  box-shadow:
+    0 3px 3px -1.5px rgba(23, 23, 23, 0.04),
+    0 1px 1px -0.5px rgba(23, 23, 23, 0.04),
+    0 0 0 1px rgba(23, 23, 23, 0.08);
+}
+
+.input-wrapper:hover {
+  background: var(--color-bg-weak-50);
+  border: none;
+}
+
+.input-wrapper:focus-within {
+  background: var(--color-bg-white); /* or stronger color */
+  border: 1px solid var(--color-primary-base);
+}
+
+.input-wrapper input {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+  font: inherit;
+  color: inherit;
+  outline: none;
+  z-index: 4;
+  flex: 1;
+}
+.input-wrapper input::placeholder {
+  color: var(--color-text-soft-400);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.084px;
+  background: none;
+}
+
+@media screen and (min-width: 768px) {
+}
